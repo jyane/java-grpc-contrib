@@ -5,7 +5,8 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-  ServerAuthInterceptorTest.class
+  ServerAuthInterceptorTest.class,
+  ClientAuthInterceptorTest.class
 })
 public class AllTests {
 }
