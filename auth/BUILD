@@ -17,9 +17,13 @@ java_test(
         "@grpc_java//core",
         "@grpc_java//core:util",
         "@grpc_java//core:inprocess",
+        "@grpc_java//stub",
         "@grpc_testing//jar",
         "@junit//jar",
+        "@com_google_truth_truth//jar",
+        ":auth",
         ":helloworld_java_grpc",
+        ":helloworld_java_proto",
     ],
     test_class = "jp.jyane.grpc.auth.AllTests",
 )

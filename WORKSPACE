@@ -20,3 +20,8 @@ maven_jar(
     artifact = "io.grpc:grpc-testing:1.8.0",
 )
 
+maven_jar(
+    name = "com_google_truth_truth",
+    artifact = "com.google.truth:truth:jar:0.37",
+)
+
