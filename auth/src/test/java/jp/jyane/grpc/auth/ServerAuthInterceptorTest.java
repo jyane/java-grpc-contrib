@@ -82,8 +82,7 @@ public class ServerAuthInterceptorTest {
       stub.sayHello(HelloRequest.newBuilder().setName("foo").build());
       fail("exception expected");
     } catch (StatusRuntimeException e) {
-      Status status = Status.fromThrowable(e);
-      assertThat(status.getCode()).isSameAs(Status.UNAUTHENTICATED.getCode());
+      assertThat(e.getStatus().getCode()).isSameAs(Status.UNAUTHENTICATED.getCode());
     }
   }
 
