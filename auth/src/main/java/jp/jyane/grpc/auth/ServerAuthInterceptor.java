@@ -1,5 +1,6 @@
 package jp.jyane.grpc.auth;
 
+import com.google.common.base.Preconditions;
 import io.grpc.Metadata;
 import io.grpc.ServerCall;
 import io.grpc.ServerCall.Listener;
@@ -11,6 +12,7 @@ public class ServerAuthInterceptor implements ServerInterceptor {
   private final Authenticator authenticator;
 
   public ServerAuthInterceptor(Authenticator authenticator) {
+    Preconditions.checkNotNull(authenticator, "authenticator");
     this.authenticator = authenticator;
   }
 
