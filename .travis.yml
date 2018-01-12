@@ -7,7 +7,7 @@ os:
   - linux
 
 script:
-  - gradle test
+  - ./gradlew test
 
 notifications:
   email: false
