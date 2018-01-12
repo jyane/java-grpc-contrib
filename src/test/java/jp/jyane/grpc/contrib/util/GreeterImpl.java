@@ -1,4 +1,4 @@
-package jp.jyane.grpc.auth.util;
+package jp.jyane.grpc.contrib.util;
 
 import io.grpc.examples.helloworld.GreeterGrpc.GreeterImplBase;
 import io.grpc.examples.helloworld.HelloReply;

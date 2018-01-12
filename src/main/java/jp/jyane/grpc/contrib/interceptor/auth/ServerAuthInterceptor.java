@@ -1,4 +1,4 @@
-package jp.jyane.grpc.auth;
+package jp.jyane.grpc.contrib.interceptor.auth;
 
 import com.google.common.base.Preconditions;
 import io.grpc.Metadata;
