@@ -1,21 +1,16 @@
-dist: trusty
+language: java
 
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - wget
-      - pkg-config
+jdk:
+  - oraclejdk8
 
-before_install:
-  - wget https://github.com/bazelbuild/bazel/releases/download/0.9.0/bazel_0.9.0-linux-x86_64.deb
-  - sudo dpkg -i bazel_0.9.0-linux-x86_64.deb
+os:
+  - linux
 
 script:
-  - bazel test ...
+  - ./gradlew test
 
 notifications:
   email: false
   slack:
     secure: FKBgCF66/RUSqzzs+ZYVKbDebxg7mw1kiIdEEvFV8v9hC54Sbt3itXM6LLdmCM278TGNMvQ65omOHSHp/Jyj13/VvVAJnh8yw2PqfbhpEhPAxwZPWNrx74uz0mW/NeH56D2Xu5uC4Wt/VMA24aQzioFj/gLW/XB4i6z7328iS7QcPaPRIh59f+i5M345UhGi5zyeluqneYSt8ZS+cx2SFB50Cb6iKbox54NCZItEBFuCKOuTCkhiKKp4DPbtltCUTNUj7BwX9FIpdywMQcMMZLqCeid+HjXTAMWIgp1DpaLisP1PvzZGBpiw/8WEu7rmmng4JKTkg4XtYOWh64GKnT04JuWTYBrpwpdFdmaFLMKQDV9TRWJxlAwtpilYmB27rDpFlYZ6+rHubCa0QKEl7n+ueZ8/ch68fYMllvU73uJQQHyUmn7J4+Lrv/QGTR308kwB17m5/H4+VtBxX/jr+ubBZRE83vUxuWi4UtQB4KU7oIBUC/DoHJhJwFAptN8PCJQXQ0+UUe4E+H61TJWI1B+FpFV/wOT/ux9Vk1S7i7ywpKAXg2ljRHfaxyRC96AGg0Thpyc1dJL/+HkrKzzNtLrLcoUxO4E0QkzXJ3u3z+i+SvpH6rb3Wnbv71+Hte+ardc4Geagb6iQzJXSesRKfYinbvQ8iMMUB79K9YD/3Xc=
+

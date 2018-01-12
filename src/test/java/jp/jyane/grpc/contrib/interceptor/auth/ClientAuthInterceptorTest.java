@@ -1,4 +1,4 @@
-package jp.jyane.grpc.auth;
+package jp.jyane.grpc.contrib.auth;
 
 import static com.google.common.truth.Truth.assertThat;
 import static org.junit.Assert.fail;
@@ -16,7 +16,8 @@ import io.grpc.examples.helloworld.GreeterGrpc.GreeterBlockingStub;
 import io.grpc.examples.helloworld.HelloReply;
 import io.grpc.examples.helloworld.HelloRequest;
 import io.grpc.testing.GrpcServerRule;
-import jp.jyane.grpc.auth.util.GreeterImpl;
+import jp.jyane.grpc.contrib.util.GreeterImpl;
+import jp.jyane.grpc.contrib.interceptor.auth.ClientAuthInterceptor;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,8 +1,10 @@
-/bazel-bazel
-/bazel-bin
-/bazel-genfiles
-/bazel-out
-/bazel-testlogs
-/bazel.iml
-/output/
-/bazel-java-grpc-interceptors
+# Gradle
+build
+gradle.properties
+.gradle
+local.properties
+out
+
+# IntelliJ IDEA
+.idea
+*.iml
