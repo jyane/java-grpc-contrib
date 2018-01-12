@@ -1,7 +1,8 @@
-# java-grpc-interceptors
-Useful interceptors for grpc-java.
+# java-grpc-contrib
+Useful libraries for grpc-java.
 
 ## TODO
+### Interceptors
 - [x] auth
 - [ ] client-side caching
 - [ ] logging (or debbug)
