@@ -66,6 +66,13 @@ checkstyleTest {
     source = fileTree(dir: "src/test", include: "**/*.java")
 }
 
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        html.enabled false
+    }
+}
+
 protobuf {
     protoc {
         artifact = "com.google.protobuf:protoc:3.5.1-1"
