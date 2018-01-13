@@ -1,4 +1,4 @@
-package jp.jyane.grpc.contrib.auth;
+package jp.jyane.grpc.contrib.interceptor.auth;
 
 import static com.google.common.truth.Truth.assertThat;
 import static org.junit.Assert.fail;
