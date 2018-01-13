@@ -1,14 +1,19 @@
 apply plugin: 'java'
 apply plugin: 'com.google.protobuf'
+apply plugin: 'net.ltgt.errorprone'
 
 buildscript {
     repositories {
         mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
     }
     dependencies {
         // ASSUMES GRADLE 2.12 OR HIGHER. Use plugin version 0.7.5 with earlier
         // gradle versions
         classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.1'
+        classpath 'net.ltgt.gradle:gradle-errorprone-plugin:0.0.13'
     }
 }
 
@@ -26,6 +31,8 @@ dependencies {
     testCompile "io.grpc:grpc-testing:${grpcVersion}"
     testCompile "junit:junit:4.12"
     testCompile "com.google.truth:truth:0.37"
+
+    errorprone 'com.google.errorprone:error_prone_core:2.2.0'
 }
 
 sourceSets {
@@ -38,6 +45,13 @@ sourceSets {
         }
     }
 }
+
+ext {
+    [compileJava, compileTestJava].each() {
+      it.options.compilerArgs += ["-XepExcludedPaths:.*/build/generated/.*"]
+    }
+}
+
 
 protobuf {
     protoc {
