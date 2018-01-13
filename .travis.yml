@@ -7,7 +7,7 @@ os:
   - linux
 
 script:
-  - ./gradlew test
+  - ./gradlew build
 
 notifications:
   email: false

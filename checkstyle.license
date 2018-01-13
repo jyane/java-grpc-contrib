@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 jyane.
+ * Copyright 2015, gRPC Authors All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,19 +13,3 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-package jp.jyane.grpc.contrib.util;
-
-import io.grpc.examples.helloworld.GreeterGrpc.GreeterImplBase;
-import io.grpc.examples.helloworld.HelloReply;
-import io.grpc.examples.helloworld.HelloRequest;
-
-public class GreeterImpl extends GreeterImplBase {
-  @Override
-  public void sayHello(HelloRequest request,
-      io.grpc.stub.StreamObserver<HelloReply> responseObserver) {
-    HelloReply reply = HelloReply.newBuilder().setMessage(request.getName()).build();
-    responseObserver.onNext(reply);
-    responseObserver.onCompleted();
-  }
-}
