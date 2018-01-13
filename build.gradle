@@ -2,6 +2,7 @@ apply plugin: 'java'
 apply plugin: 'com.google.protobuf'
 apply plugin: 'net.ltgt.errorprone'
 apply plugin: 'checkstyle'
+apply plugin: "jacoco"
 
 buildscript {
     repositories {
