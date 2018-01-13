@@ -1,6 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'com.google.protobuf'
 apply plugin: 'net.ltgt.errorprone'
+apply plugin: 'checkstyle'
 
 buildscript {
     repositories {
@@ -46,12 +47,23 @@ sourceSets {
     }
 }
 
-ext {
-    [compileJava, compileTestJava].each() {
-      it.options.compilerArgs += ["-XepExcludedPaths:.*/build/generated/.*"]
-    }
+[compileJava, compileTestJava].each() {
+  it.options.compilerArgs += ["-XepExcludedPaths:.*/build/generated/.*"]
 }
 
+checkstyle {
+    configFile = file("$rootDir/checkstyle.xml")
+    toolVersion = "6.17"
+    ignoreFailures = false
+}
+
+checkstyleMain {
+    source = fileTree(dir: "src/main", include: "**/*.java")
+}
+
+checkstyleTest {
+    source = fileTree(dir: "src/test", include: "**/*.java")
+}
 
 protobuf {
     protoc {
