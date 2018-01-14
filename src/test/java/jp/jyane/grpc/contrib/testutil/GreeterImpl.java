@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package jp.jyane.grpc.contrib.util;
+package jp.jyane.grpc.contrib.testutil;
 
 import io.grpc.examples.helloworld.GreeterGrpc.GreeterImplBase;
 import io.grpc.examples.helloworld.HelloReply;
