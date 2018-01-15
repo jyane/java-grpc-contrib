@@ -12,6 +12,9 @@ Useful libraries for grpc-java.
 - [ ] logging (or debbug)
 - [ ] automatic context propagation
 
+### Util
+- [x] MoreStatus
+
 ## Feature
 TBD
 

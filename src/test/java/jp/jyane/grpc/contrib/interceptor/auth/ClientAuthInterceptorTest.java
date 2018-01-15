@@ -32,7 +32,7 @@ import io.grpc.examples.helloworld.GreeterGrpc.GreeterBlockingStub;
 import io.grpc.examples.helloworld.HelloReply;
 import io.grpc.examples.helloworld.HelloRequest;
 import io.grpc.testing.GrpcServerRule;
-import jp.jyane.grpc.contrib.util.GreeterImpl;
+import jp.jyane.grpc.contrib.testutil.GreeterImpl;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
