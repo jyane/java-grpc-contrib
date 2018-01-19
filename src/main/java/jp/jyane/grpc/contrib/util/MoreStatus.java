@@ -43,7 +43,7 @@ public class MoreStatus {
    * @param status {@link io.grpc.Status}
    * @return {@link com.google.rpc.Status}
    */
-  public static com.google.rpc.Status fromStatus(@Nonnull Status status) {
+  public static com.google.rpc.Status fromStatus(Status status) {
     checkNotNull(status, "status");
     return createBuilderFromStatus(status).build();
   }
@@ -55,8 +55,7 @@ public class MoreStatus {
    * @param details {@link com.google.protobuf.Message}
    * @return {@link com.google.rpc.Status}
    */
-  public static com.google.rpc.Status fromStatusWithDetails(@Nonnull Status status,
-      @Nonnull Message... details) {
+  public static com.google.rpc.Status fromStatusWithDetails(Status status, Message... details) {
     checkNotNull(status, "status");
     Builder statusProtoBuilder = createBuilderFromStatus(status);
     for (Message message : details) {
