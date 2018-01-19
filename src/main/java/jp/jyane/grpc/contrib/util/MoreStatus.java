@@ -23,7 +23,6 @@ import com.google.protobuf.Any;
 import com.google.protobuf.Message;
 import com.google.rpc.Status.Builder;
 import io.grpc.Status;
-import javax.annotation.Nonnull;
 
 /**
  * Utility class for {@link com.google.rpc.Status} and {@link io.grpc.Status}
